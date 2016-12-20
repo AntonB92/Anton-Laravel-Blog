@@ -22,10 +22,10 @@
 		{!! $post->body !!}
 	</div>	
 	<div>
-		<h2>Leave a comment</h2>
+		<h2>Коментирай</h2>
 	</div>
 	@if(Auth::guest())
-		<p>Login to Comment</p>
+		<p>Моля,влезте в профила си за коментар</p>
 	@else
 		<div class="panel-body">
 			<form method="post" action="/comment/add">

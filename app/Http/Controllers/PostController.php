@@ -2,7 +2,7 @@
 
 use App\Posts;
 use App\User;
-use Redirect;
+use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PostFormRequest;
 
@@ -103,8 +103,8 @@ class PostController extends Controller {
 	 * Show the form for editing the specified resource.
 	 *
 	 * @param  int  $id
-	 * @return Response
-	 */
+	 * @return \Illuminate\View\View
+     */
 	public function edit(Request $request,$slug)
 	{
 		$post = Posts::where('slug',$slug)->first();

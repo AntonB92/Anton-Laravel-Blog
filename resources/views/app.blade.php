@@ -42,7 +42,7 @@
 						<a href="{{ url('/') }}">Начало</a>
 					</li>
 					<li>
-						<a class="page-scroll" href="smart-devices.html">Смартфони</a>
+						<a class="page-scroll" href="{{ url('smartphones.blade.php') }}">Смартфони</a>
 					</li>
 					<li>
 						<a class="page-scroll" href="#three">Таблети</a>
@@ -64,11 +64,12 @@
 						</li>
 					@else
 						<li class="dropdown">
+							@if (Auth::user()->can_post())
 							<a href="{{ url('/user/'.Auth::id().'/posts') }}" class="nav navbar-nav navbar-right" role="button" aria-expanded="false" style="margin-right: -100px;margin-top: -30px;">{{ Auth::user()->name }} <span class="caret"></span></a>
 
 							<a href="{{ url('/new-post') }}" class="nav navbar-nav navbar-right" role="button" aria-expanded="false" style="margin-right: -10px;margin-top: -30px">Добави новина <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								@if (Auth::user()->can_post())
+
 									<li>
 										<a href="{{ url('/new-post') }}">Добави новина</a>
 									</li>
@@ -76,10 +77,11 @@
 										<a href="{{ url('/user/'.Auth::id().'/posts') }}">Моите новини</a>
 									</li>
 								@endif
-								<li>
+
 									<a href="{{ url('/user/'.Auth::id()) }}">Профил</a>
-								</li>
-								<li>
+								
+									<a href="{{ url('/auth/logout') }}" class="nav navbar-nav navbar-right" role="button" aria-expanded="false" style="margin-right: -10px;margin-top: -30px">Излез< <span class="caret"></span></a>
+
 									<a href="{{ url('/auth/logout') }}">Излез</a>
 								</li>
 							</ul>

@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-Add New Post
+Добавете новина
 @endsection
 
 @section('content')
@@ -18,7 +18,7 @@ Add New Post
 <form action="/new-post" method="post">
 	<input type="hidden" name="_token" value="{{ csrf_token() }}">
 	<div class="form-group">
-		<input required="required" value="{{ old('title') }}" placeholder="Enter title here" type="text" name = "title"class="form-control" />
+		<input required="required" value="{{ old('title') }}" placeholder="Заглавие" type="text" name = "title"class="form-control" />
 	</div>
 	<div class="form-group">
 		<textarea name='body'class="form-control">{{ old('body') }}</textarea>

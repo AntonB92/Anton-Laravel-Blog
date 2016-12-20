@@ -348,7 +348,7 @@ textarea {
 }
 
 .btn.btn-primary {
-    background-color: transparent;
+
     border:1px solid #f0f0f0;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
