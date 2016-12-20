@@ -20,7 +20,8 @@ Route::group(['middleware' => ['auth']], function()
     // show new post form
     Route::get('new-post','PostController@create');
     // save new post
-    Route::post('new-post','PostController@store');
+//    Route::post('new-post','PostController@store');
+    Route::post('/new-post/store', 'PostController@store');
     // edit post form
     Route::get('edit/{slug}','PostController@edit');
     // update post

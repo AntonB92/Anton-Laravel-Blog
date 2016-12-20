@@ -15,7 +15,7 @@
 	}); 
 </script>
 
-<form action="/new-post" method="post">
+<form action="{{url( '/new-post/store' )}}" method="post">
 	<input type="hidden" name="_token" value="{{ csrf_token() }}">
 	<div class="form-group">
 		<input required="required" value="{{ old('title') }}" placeholder="Заглавие" type="text" name = "title"class="form-control" />
@@ -24,6 +24,6 @@
 		<textarea name='body'class="form-control">{{ old('body') }}</textarea>
 	</div>
 	<input type="submit" name='publish' class="btn btn-success" value = "Publish"/>
-	<input type="submit" name='save' class="btn btn-default" value = "Save Draft" />
+
 </form>
 @endsection
