@@ -63,7 +63,7 @@
 </div>
 
 <div class="panel panel-default">
-	<div class="panel-heading"><h3>Latest Comments</h3></div>
+	<div class="panel-heading"><h3>Последни коментари</h3></div>
 	<div class="list-group">
 		@if(!empty($latest_comments[0]))
 		@foreach($latest_comments as $latest_comment)
