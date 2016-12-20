@@ -9,4 +9,3 @@ what is App?
 
 
 
-With help from: http://www.findalltogether.com/ 
